@@ -12,6 +12,7 @@ function Home() {
   const [imgheight, setimgheight] = useState(50);
 
   return (
+<<<<<<< HEAD
     <div className="container">
       <h1 className="head">
         Welcome To Emoji Picker using <span className="colored">useState</span>
@@ -32,6 +33,26 @@ function Home() {
       </div>
 
       {/* Emoji Buttons */}
+=======
+    <>
+      <h1 className="head">
+        Welcome To Emoji Picker using <span className="colored">useState</span>
+      </h1>
+<div className='emoji-picker' style={{background:`${color}`}}>
+     <div className="emoji-container1" style={{ height: "100px", width: "100px", display: "flex", alignItems: "center", justifyContent: "center" }}>
+  <span
+    style={{
+      transform: `rotateZ(${rotate}deg)`,
+      fontSize: `${imgheight}px`,
+      display: 'inline-block',
+    }}
+  >
+    {emoji}
+  </span>
+</div>
+</div>
+
+>>>>>>> ebb69e746cef5b0e8168233c20ea3b21ba5c225e
       <div className='box'>
         <Emojii emojis={'🌸'} setEmoji1={setEmoji} />
         <Emojii emojis={'🚀'} setEmoji1={setEmoji} />
@@ -41,7 +62,10 @@ function Home() {
         <Emojii emojis={'❤️'} setEmoji1={setEmoji} />
       </div>
 
+<<<<<<< HEAD
       {/* Color Selection */}
+=======
+>>>>>>> ebb69e746cef5b0e8168233c20ea3b21ba5c225e
       <div className='color-container'>
         <Color colorSelected={'pink'} setColor={setColor} />
         <Color colorSelected={'red'} setColor={setColor} />
@@ -53,6 +77,7 @@ function Home() {
         <Color colorSelected={'yellow'} setColor={setColor} />
         <Color colorSelected={'brown'} setColor={setColor} />
       </div>
+<<<<<<< HEAD
 
       {/* Slider */}
       <div className='slider-container'>
@@ -81,3 +106,19 @@ function Home() {
 }
 
 createRoot(document.getElementById('root')).render(<Home />);
+=======
+  <input type='range' className='slider' min={10} max={100} onChange={(e)=>{setimgheight(e.target.value)}}></input>
+      <img
+        src={RotateImg}
+        className='img-1'
+        style={{ transform: `rotateZ(${rotate}deg)`, cursor: 'pointer' }}
+        alt="Rotating"
+        onClick={() => setRotate(prev => prev + 45)} 
+      />
+    
+    </>
+  );
+}
+
+createRoot(document.getElementById('root')).render(<Home />);
+>>>>>>> ebb69e746cef5b0e8168233c20ea3b21ba5c225e
